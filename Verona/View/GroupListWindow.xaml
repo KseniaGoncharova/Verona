@@ -1,0 +1,38 @@
+﻿<Window x:Class="Verona.View.GroupListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Verona.View"
+        mc:Ignorable="d"
+        Title="Verona" Height="480" Width="380" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Closed="GroupListWindow_OnClosed">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="52"/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="GeneralScheduleButton" Grid.Row="0" Content="Общий график" 
+                HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="140" Height="35" 
+                Click="GeneralScheduleButton_OnClick"/>
+
+
+        <Button x:Name="AddGroupButton" Content="+" Grid.Row="1" Height="24" Width="48" Margin="20,0"
+                VerticalAlignment="Top" HorizontalAlignment="Left"
+                Click="AddGroupButton_OnClick"/>
+        <Border BorderBrush="LightGray" Background="#FFFBFBFB" Grid.Row="1" 
+                Margin="20,24,20,0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" BorderThickness="1">
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel x:Name="GroupsStackPanel"/>
+            </ScrollViewer>
+        </Border>
+
+        <Button x:Name="BrokenFilterButton" Grid.Row="2" Content="Поломка фильтра (000)" 
+                Margin="0,0,160,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="140" Height="35"
+                Click="BrokenFilterButton_OnClick"/>
+        <Button x:Name="NoWorkingButton" Grid.Row="2" Content="Не требуют уход (000)" 
+                Margin="160,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="140" Height="35"
+                Click="NoWorkingButton_OnClick"/>
+    </Grid>
+</Window>

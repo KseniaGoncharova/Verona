@@ -1,0 +1,26 @@
+﻿<Window x:Class="Verona.View.AddGroupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Verona.View"
+        mc:Ignorable="d"
+        Title="Добавление группы"  Height="180" Width="400" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid Margin="45,20,45,75">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="0" Text="Название:" HorizontalAlignment="Center" FontSize="14"/>
+            <TextBox x:Name="_nameGroup" Grid.Row="1" />
+        </Grid>
+
+        <Button x:Name="AddButton" Grid.Row="2" Content="Добавить" 
+                Margin="0,0,160,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="140" Height="35"
+                Click="AddButton_Click"/>
+        <Button x:Name="CancelButton" Grid.Row="2" Content="Отмена" 
+                Margin="160,0,0,20" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="140" Height="35"
+                Click="CancelButton_Click"/>
+    </Grid>
+</Window>

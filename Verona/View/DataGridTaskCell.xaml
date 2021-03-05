@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Verona.View.DataGridTaskCell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Verona.View"
+             mc:Ignorable="d">
+    <Grid Margin="5">
+        <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+            <Image Name="Cleaning" Height="12" Width="12" Margin="0,0,0,4" Source="Images/Cleaning.png"/>
+            <Image Name="WaterChange" Height="12" Width="12" Margin="0,0,0,4" Source="Images/WaterChange.png"/>
+            <Image Name="AddingMedicine" Height="12" Width="12" Margin="0,0,0,0" Source="Images/AddingMedicine.png"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
